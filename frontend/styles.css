@@ -9,9 +9,7 @@
     
     font-style: normal;
 }
-button, input {
-  -webkit-appearance: none;
-}
+
 
 :root {
     --bg: #E3F2FD;
