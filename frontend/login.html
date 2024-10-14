@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="theme-color" content=" #E3F2FD" />
     <link href="styles.css" rel="stylesheet" />
-         <meta name="theme-color" content=" #E3F2FD" />
     <script src="https://kit.fontawesome.com/887e89cc19.js" crossorigin="anonymous"></script>
     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
-    <title>Macron Investment</title>
+    <title>ApexGrowth</title>
 
     <style>
         #btn-sg {
@@ -51,12 +51,12 @@
         <img src="images/logo.png" alt="" width="" />
         <div class="sng">
             <p class="s">Sign in</p>
-            <p class="p">Simply enter your phone number to login or create an account.</p>
+            <p class="p">Simply enter your email to login or create an account.</p>
         </div>
 
         <!-- Form with validation -->
         <form id="loginForm">
-            <input type="text" id="phone" class="inputStyle" placeholder="Enter Phone Number" />
+            <input type="email" id="phone" class="inputStyle" placeholder="Enter Your Email" />
             <input type="password" id="password" class="inputStyle" placeholder="Enter Password" />
             <div class="show" onclick="togglePasswordVisibility('password', 'eyeIcon')">
                 <i class="fa fa-eye" id="eyeIcon"></i>
@@ -89,7 +89,7 @@
 
             // Check if both fields are filled
             if (!phone || !password) {
-                showPopup('Please fill in both phone and password fields.', false);
+                showPopup('Please fill in both email and password fields.', false);
                 resetLoginButton();
                 return;
             }
