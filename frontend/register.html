@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="theme-color" content=" #E3F2FD" />
     <link href="styles.css" rel="stylesheet" />
-      <meta name="theme-color" content=" #E3F2FD " />
     <script src="https://kit.fontawesome.com/887e89cc19.js" crossorigin="anonymous"></script>
     <link href="fontawesome/css/all.min.css" rel="stylesheet" />
-    <title>Macron Investment</title>
+    <title>ApexGrowth</title>
 
     <style>
         #btn-sg {
@@ -62,7 +62,7 @@
 
         <!-- Form with validation -->
         <form id="registerForm">
-            <input type="text" id="phone" class="inputStyle" placeholder="Enter Phone Number" />
+            <input type="email" id="phone" class="inputStyle" placeholder="Enter Your Email" />
             <input type="password" id="password" class="inputStyle" placeholder="Enter Password" />
             <input type="password" id="confirmPassword" class="inputStyle" placeholder="Confirm Password" />
             <div class="show" onclick="togglePasswordVisibility('password', 'eyeIcon1')">
@@ -141,9 +141,9 @@
             const confirmPassword = document.getElementById('confirmPassword').value;
 
             // Phone validation: check if it's numeric and between 6 and 15 digits
-            const phonePattern = /^[0-9]{6,15}$/;
+            const phonePattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!phonePattern.test(phone)) {
-                showPopup('Please enter a valid phone number.', false);
+                showPopup('Please enter a valid Email.', false);
                 return;
             }
 
@@ -181,7 +181,7 @@
                 const checkData = await duplicateCheck.json();
 
                 if (checkData.exists) {
-                    showPopup('Phone number already exists. Please use a different number.', false);
+                    showPopup('Email already exists. Please use a different email.', false);
                     hideLoading();
                     return;
                 }
